@@ -1,16 +1,13 @@
-import React from "react";
-import { Layout, Menu } from "antd";
+import { Menu } from "antd";
+import { Header } from "antd/lib/layout/layout";
 import { useHistory } from "react-router-dom";
 
 import routes from "routes";
 
-const { Header, Content } = Layout;
-
-const HeaderContentLayout = ({ children }) => {
+const OurHeader = () => {
   const history = useHistory();
   return (
-    <Layout>
-      <Header>
+    <Header>
         <Menu theme="dark" mode="horizontal">
           <Menu.Item
             key="polls"
@@ -40,13 +37,7 @@ const HeaderContentLayout = ({ children }) => {
           </Menu.Item>
         </Menu>
       </Header>
-      <Content
-        style={{ padding: 50, minHeight: "calc(100vh - 64px)", height: "100%" }}
-      >
-        {children}
-      </Content>
-    </Layout>
-  );
-};
+      );
+}
 
-export default HeaderContentLayout;
+export default OurHeader;

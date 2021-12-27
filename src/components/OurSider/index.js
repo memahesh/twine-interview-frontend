@@ -31,7 +31,7 @@ const OurSider = (props) => {
     }
 
     return (
-        <Sider style={props.siderStyle}>
+        <Sider>
             <Menu theme="dark">
                 {
                     Object.keys(counterMap).map((key) => {

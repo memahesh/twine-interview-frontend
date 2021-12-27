@@ -6,9 +6,9 @@ import CpoHqForumView from "pages/CpoHqForumView";
 import CpoHqPollsView from "pages/CpoHqPollsView";
 
 import routes from "routes";
-import HeaderWithSiderContentLayout from "layout/HeaderWithSiderContentLayout";
 import CounterContextProvider from "provider/CounterContextProvider";
 import { QueryClient, QueryClientProvider } from "react-query";
+import BaseLayout from "layout/BaseLayout";
 
 const pages = [
   { exact: true, path: routes.dashboard, showSider:false, component: DashboardView },
@@ -33,9 +33,9 @@ const App = () => {
                     path={path}
                     showSider = {showSider}
                   >
-                    <HeaderWithSiderContentLayout>
+                    <BaseLayout>
                       <Component showSider={showSider} />
-                    </HeaderWithSiderContentLayout>
+                    </BaseLayout>
                   </Route>
               );
             })}
